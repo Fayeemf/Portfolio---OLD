@@ -1,0 +1,5 @@
+apps:
+  - script   : 'server.js'
+    name     : 'Server'
+    exec_mode: 'cluster'
+    instances: 2
