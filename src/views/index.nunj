@@ -1,0 +1,7 @@
+{% extends 'layout.nunj' %}
+
+{% block content %}
+    <h2>Hi, I'm Valentin</h2>
+    <p>I'm a full stack developer passionate about programming and new technologies.</p>
+    <p>Check out my <a href="/projects/">projects</a> or <a href="/contact/">send me a message</a> !</p>
+{% endblock %}

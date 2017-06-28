@@ -1,0 +1,33 @@
+{% extends 'layout.nunj' %}
+
+{% block content %}
+    <h2>Wander</h2>
+    <h3>An open-source multiplayer game</h3>
+    <br/>
+
+    <p>Wander is a project that I worked on during 6 months with a classmate</p>
+    <p>Our goal was to create an open-source multiplayer game using modern web technologies.</p>
+    <p>This game sets you up in a 2d environment where you can meet friends, buy virtual houses and play a virtual job such as policeman.</p>
+
+    <p>We integrated game mechanics such as collision, rain and time of day with the use of the Javascript library <a href="https://phaser.io/">Phaser</a></p>
+    <p>The main difficulty for this project was to synchronize every players to provide smooth gameplay. We achieved this using fast websockets and positiion
+    interpolation for players.</p>
+
+    <p>
+        We also ported the game to mobile using <a href="https://libgdx.badlogicgames.com/">Libgdx</a>, a cross-platform Java game development framework.
+        This way, mobile and desktop users are allowed to play together on the same map, at the same time.
+    </p>
+    <br/>
+    <em>Technologies</em>
+    <ul class="nav nav-pills">
+        <li class="active"><a href="javascript:void(0)">ASP .net</a></li>
+        <li class="active"><a href="javascript:void(0)">C# .net</a></li>
+        <li class="active"><a href="javascript:void(0)">Javascript</a></li>
+        <li class="active"><a href="javascript:void(0)">SignalR</a></li>
+        <li class="active"><a href="javascript:void(0)">Websockets</a></li>
+        <li class="active"><a href="javascript:void(0)">HTML5</a></li>
+        <li class="active"><a href="javascript:void(0)">CSS</a></li>
+        <li class="active"><a href="javascript:void(0)">Java</a></li>
+    </ul>
+    <hr/>
+{% endblock %}

@@ -1,0 +1,69 @@
+<html>
+    <head>
+        {% block head %}
+            <title>{{ (title or 'Portfolio') + ' - Valentin Chatelain' }}</title>
+            <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+            <link rel="stylesheet" type="text/css" href="/css/bootstrap-material-design.css">
+            <link rel="stylesheet" type="text/css" href="/css/ripples.min.css">
+            <link rel="stylesheet" type="text/css" href="/css/site.css">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+            <script src="/js/bootstrap.min.js"></script>
+            <script src="/js/ripples.min.js"></script>
+            <script src="/js/material.min.js"></script>
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        {% endblock %}
+    </head>
+
+    <body>
+        {% block menu %}
+        <div class="header-panel shadow-z-2">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-3">
+                        <h1>Valentin Chatelain</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid main">
+            <div class="row">
+                <nav class="col-xs-3 menu">
+                    <ul>
+                        <li class="{{ 'active' if title == 'Home' else '' }} withripple" data-target="/">Home</li>
+                        <li class="{{ 'active' if title == 'Projects' else '' }} withripple" data-target="/projects">Projects</li>
+                        <li class="{{ 'active' if title == 'Professional experience' else '' }} withripple" data-target="/experience">Professional experience</li>
+                        <li class="{{ 'active' if title == 'Skills' else '' }} withripple" data-target="/skills">Skills</li>
+                        <li class="{{ 'active' if title == 'Contact' else '' }} withripple" data-target="/contact">Contact</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        {% endblock %}
+        <div class="pages col-xs-9">
+            <div class="row">
+                <div class="col-xs-10">
+                    <div class="well page">
+                        <h1 class="header">{{ title }}</h1>
+                        {% block content %}
+
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        {% block scripts %}
+        $.material.init();
+        $('li').click(function() {
+           const li = $(this);
+           const target = li.attr('data-target');
+           if (target) {
+               window.location = target;
+           }
+        });
+        {% endblock %}
+    </script>
+</html>
