@@ -4,7 +4,7 @@ const utils = require('../utils');
 
 module.exports = app => {
   app.get('/', function (req, res) {
-    res.render('index.nunj', { title: 'Home', page: 'Home' });
+    res.render('index.nunj', { title: 'Home', page: 'Home', data });
   });
 
   app.get('/projects', function (req, res) {
