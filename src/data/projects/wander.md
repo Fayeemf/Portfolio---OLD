@@ -1,5 +1,3 @@
-## Wander
-
 ### An open-source multiplayer game
 
 Wander is a project that I worked on during 6 months with a classmate.

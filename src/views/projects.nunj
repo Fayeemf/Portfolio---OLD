@@ -1,15 +1,26 @@
 {% extends 'layout.nunj' %}
 
 {% block content %}
-
     {% for project in data.projects %}
-        {{ utils.getProjectContent(project.descriptionFile) | safe }}
+            <div class="container" style="width: 100%">
+                <h2><a href="/project/{{ project.id }}">{{ project.name }}</a></h2>
+
+                <div class="col-md-6">
+                    {{ utils.getProjectContent(project.descriptionFile) | safe }}
+                </div>
+
+                <div class="col-md-4 col-md-offset-2">
+                    <img src="/img/{{ project.image }}" class="img-responsive img-circle" alt="{{ project.name }}">
+                </div>
+            </div>
+        <br/>
         <em>Technologies</em>
-        <ul class="nav nav-pills">
+        <br/>
         {% for skill in project.skills %}
-            <li class="active"><a href="javascript:void(0)">{{ utils.getSkillById(skill).name or skill }}</a></li>
+            <div class="btn-group">
+                <button class="btn btn-primary btn-sm btn-raised">{{ utils.getSkillById(skill).name or skill }}</button>
+            </div>
         {% endfor %}
-        </ul>
         <hr/>
     {% endfor %}
 {% endblock %}

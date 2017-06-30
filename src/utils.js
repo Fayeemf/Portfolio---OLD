@@ -26,8 +26,13 @@ function getSkillById(id) {
   return data.skills.filter(x => x.id === id)[0];
 }
 
+function getRelatedProjects(skillId) {
+  return data.projects.filter(x => x.skills.some(z => z === skillId));
+}
+
 module.exports = {
   readProjects,
   getProjectContent,
-  getSkillById
+  getSkillById,
+  getRelatedProjects
 };

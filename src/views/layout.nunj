@@ -30,11 +30,11 @@
             <div class="row">
                 <nav class="col-xs-3 menu">
                     <ul>
-                        <li class="{{ 'active' if title == 'Home' else '' }} withripple" data-target="/">Home</li>
-                        <li class="{{ 'active' if title == 'Projects' else '' }} withripple" data-target="/projects">Projects</li>
-                        <li class="{{ 'active' if title == 'Professional experience' else '' }} withripple" data-target="/experience">Professional experience</li>
-                        <li class="{{ 'active' if title == 'Skills' else '' }} withripple" data-target="/skills">Skills</li>
-                        <li class="{{ 'active' if title == 'Contact' else '' }} withripple" data-target="/contact">Contact</li>
+                        <li class="{{ 'active' if page == 'Home' else '' }} withripple" data-target="/">Home</li>
+                        <li class="{{ 'active' if page == 'Projects' else '' }} withripple" data-target="/projects">Projects</li>
+                        <li class="{{ 'active' if page == 'Professional experience' else '' }} withripple" data-target="/experience">Professional experience</li>
+                        <li class="{{ 'active' if page == 'Skills' else '' }} withripple" data-target="/skills">Skills</li>
+                        <li class="{{ 'active' if page == 'Contact' else '' }} withripple" data-target="/contact">Contact</li>
                     </ul>
                 </nav>
             </div>

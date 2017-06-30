@@ -1,0 +1,13 @@
+{% extends 'layout.nunj' %}
+
+{% block content %}
+    {{ utils.getProjectContent(project.descriptionFile) | safe }}
+    <br/>
+    <em>Technologies</em>
+    <br/>
+    {% for skill in project.skills %}
+        <div class="btn-group">
+            <button class="btn btn-primary btn-sm btn-raised">{{ utils.getSkillById(skill).name or skill }}</button>
+        </div>
+    {% endfor %}
+{% endblock %}

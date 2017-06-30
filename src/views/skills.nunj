@@ -1,0 +1,16 @@
+{% extends 'layout.nunj' %}
+
+{% block content %}
+    {% for skill in data.skills %}
+        <h3>{{ skill.name | safe }}</h3>
+        <p>{{ skill.description }}</p>
+        <em>Related projects</em>
+        <br/>
+        {% for project in utils.getRelatedProjects(skill.id) %}
+            <div class="btn-group">
+                <a class="btn btn-primary btn-sm btn-raised" href="/project/{{ project.id }}">{{ project.name }}</a>
+            </div>
+        {% endfor %}
+        <hr/>
+    {% endfor %}
+{% endblock %}
